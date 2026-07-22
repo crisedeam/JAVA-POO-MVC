@@ -12,41 +12,43 @@ public class Chofer_Modelo {
     }
 
     public String getNombre_chofer() {
-        return getNombre_chofer();
+        return nombre_chofer;
     }
 
     public String getLicencia_chofer() {
-        return getLicencia_chofer();
+        return licencia_chofer;
     }
 
     public String getCedula_chofer() {
-        return getCedula_chofer();
+        return cedula_chofer;
     }
 
     //Setters
 
     public void setNombre_chofer(String nombre_chofer) {
-        this.getNombre_chofer();
+        this.nombre_chofer = nombre_chofer;
     }
 
     public void setLicencia_chofer(String licencia_chofer) {
-        this.getLicencia_chofer();
+        this.licencia_chofer = licencia_chofer;
     }
 
     public void setCedula_chofer(String cedula_chofer) {
-        this.getCedula_chofer();
+        this.cedula_chofer = cedula_chofer;
     }
 
+    //validacion
+
     public boolean NombreValidacion() {
-        return !nombre_chofer.equals("");
+        return nombre_chofer !=null && !nombre_chofer.trim().isEmpty();
     }
 
     public boolean LicenciaValidacion() {
-        return !licencia_chofer.equals("");
+        return licencia_chofer !=null && !licencia_chofer.trim().isEmpty();
     }
 
 
     public boolean CedulaValidacion() {
-        return !cedula_chofer.equals("");
+        return cedula_chofer !=null && !cedula_chofer.trim().isEmpty();
     }
 }

@@ -2,30 +2,30 @@ package Vista;
 
 import java.util.Scanner;
 
-
 public class Vista_Chofer {
 
-    private Scanner teclado = new Scanner(System.in);
+    private Scanner scanner;
 
-    public String registrarNombreChofer(){
-
-        System.out.println("Ingrese su nombre:");
-        return teclado.nextLine();
-
+    public Vista_Chofer() {
+        this.scanner = new Scanner(System.in);
     }
 
-    public String registrarCedulaChofer(){
-
-        System.out.println("Ingrese su cedula: ");
-        return teclado.nextLine();
-
+    public String registrarNombreChofer() {
+        System.out.print("Ingrese el nombre del chofer: ");
+        return this.scanner.nextLine();
     }
 
-    public String registrarLicenciaChofer(){
-
-        System.out.println("Ingrese su licencia: ");
-        return teclado.nextLine();
-
+    public String registrarCedulaChofer() {
+        System.out.print("Ingrese la cédula del chofer (solo números): ");
+        return this.scanner.nextLine();
     }
 
+    public String registrarLicenciaChofer() {
+        System.out.print("Ingrese la licencia del chofer: ");
+        return this.scanner.nextLine();
+    }
+
+    public void mostrarMensaje(String mensaje) {
+        System.out.println(mensaje);
+    }
 }

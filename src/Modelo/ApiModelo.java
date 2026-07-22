@@ -2,17 +2,14 @@ package Modelo;
 
 public class ApiModelo {
 
-    String clave = " ";
-    String root = " ";
-    String url = " ";
+    private String clave = "";
+    private String root = "";
+    private String url = "";
 
-    public ApiModelo (String url, String usuario, String clave){
-
-        this.clave = clave;
-        this.root = usuario;
+    public ApiModelo(String url, String usuario, String clave) {
         this.url = url;
-
-
+        this.root = usuario;
+        this.clave = clave;
     }
 
     public String getClave() {
@@ -39,26 +36,15 @@ public class ApiModelo {
         this.url = url;
     }
 
-    public boolean validar_conexion (){
-
-        if(this.clave.equals("1234")){
-            return true;
-        } else{
-            return false;
-        }
-
+    public boolean validarConexion() {
+        return this.clave != null && this.clave.equals("1234");
     }
 
-    public void desconexion(){
-        System.out.println("desconexion realizada...");
+    public void desconexion() {
+        System.out.println("Desconexión realizada...");
     }
 
-    public void buscar_chofer(String dato_nombre){
-        System.out.println("Buscando chofer.....");
-
+    public void buscarChofer(String datoNombre) {
+        System.out.println("Buscando chofer: " + datoNombre + ".....");
     }
-
-
-
-
 }
