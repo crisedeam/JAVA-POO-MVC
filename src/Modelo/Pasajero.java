@@ -8,6 +8,7 @@ public class Pasajero {
         this.num_cedula = dato_cedula;
         this.nombre_pasajero = dato_nombre;
     }
+    //gettters
     public String getNum_cedula(){return getNum_cedula();}
 
     public String getNombre_pasajero(){return getNombre_pasajero();}

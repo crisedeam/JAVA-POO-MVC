@@ -11,7 +11,7 @@ public class Carro_Modelo {
         this.marca_carro = dato_marca;
         this.color_carro = dato_color;
     }
-
+   //getters
     public String getPlaca_carro() {
         return getPlaca_carro();
     }
@@ -23,7 +23,7 @@ public class Carro_Modelo {
     public String getColor_carro() {
         return getColor_carro();
     }
-
+    //Setters
     public void setPlaca_carro(String placa_carro) {
         this.getPlaca_carro();
     }
@@ -34,5 +34,21 @@ public class Carro_Modelo {
 
     public void setColor_carro(String color_carro) {
         this.getColor_carro();
+    }
+
+
+    //validacion
+
+
+    private boolean PlacaValidacion(){
+        return !placa_carro.equals("");
+    }
+
+    private boolean MarcaValidacion(){
+        return !marca_carro.equals("");
+    }
+
+    private boolean ColorValidacion(){
+        return !color_carro.equals("");
     }
 }
